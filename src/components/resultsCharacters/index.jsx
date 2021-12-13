@@ -9,27 +9,23 @@ const currentURL = 'https://rickandmortyapi.com/api/episode/1';
 const requestURL = 'https://rickandmortyapi.com/api/episode/1';
 
 
-function ResultCharacters() {
+function ResultCharacters(props) {
     const [characters, setCharacters] = useState([]) //Джессика, Морти, Хуерти.. и прочие
+    console.log(props)
 
     useEffect(() => {
+       // let charactersUrls = episode["characters"] //URLs (Массив URL'ов) всех героев для одной текущей серии
+        let charactersUrls = props.characters //URLs (Массив URL'ов) всех героев для одной текущей серии
+        let idCharacters = charactersUrls.map((url) => {
+            let x = url.split("/")
 
-        fetch(requestURL)
-            .then((res) => res.json())
-            .then(episode => {
-                let charactersUrls = episode["characters"] //URLs (Массив URL'ов) всех героев для одной текущей серии
+            return x[x.length - 1] //
+        }).join() // мы получили массив айдишников нужных героев для серии
+        
 
-                let idCharacters = charactersUrls.map((url) => {
-                    let x = url.split("/")
-
-                    return x[x.length - 1] //
-                }).join() // мы получили массив айдишников нужных героев для серии
-                
-
-                fetch("https://rickandmortyapi.com/api/character/" + idCharacters) // один URL для вызова всех нужных героев серии
-                    .then(res => res.json()) // строки данных
-                    .then(result => setCharacters(result)) //объект данных. Записываем в charcters данные через setCharacters
-            })
+        fetch("https://rickandmortyapi.com/api/character/" + idCharacters) // один URL для вызова всех нужных героев серии
+            .then(res => res.json()) // строки данных
+            .then(result => setCharacters(result)) //объект данных. Записываем в charcters данные через setCharacters
     }, [])
     
     return(<div>

@@ -18,12 +18,12 @@ module.exports = {
       react: path.join(__dirname, 'node_modules', 'react'),
     },
   },
+  devServer: {
+    historyApiFallback: true,
+    static: './',
+    hot: true
+ },
   module: {
-    devServer: {
-      historyApiFallback: true,
-      contentBase: './',
-      hot: true
-   },
     rules: [
       {
         test: /\.(js|jsx)$/,

@@ -100,7 +100,7 @@ const ListEpisodes = () => {
                     if(currentNoSeason == noSeason) {
                         return (
                             <>
-                                <NavLink to={episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
+                                <NavLink to={"/episode/" + episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
                                 {/* <div className="SeasonEpisode">{SeasonEpisode} "{episode["name"]}" ( {episode["air_date"]} )</div> */}
                                 <br/>
                             </>
@@ -111,7 +111,7 @@ const ListEpisodes = () => {
                             <>
                                 <div className="season">{noSeason} Сезон</div>
                                 {/* <div className="SeasonEpisode">{infoSE}</div> */}
-                                <NavLink to={episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
+                                <NavLink to={"/episode/" + episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
                                 <br/>
                             </>
                             )

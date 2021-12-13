@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import "./style.css";
-import { NavLink } from 'react-router-dom';
 import getNumber from '../utilits/getNumberES.js'
 import ResultCharacters from '../resultsCharacters/index.jsx'
 import { useParams } from "react-router-dom";
@@ -33,7 +32,7 @@ function EpisodeInfo() {
     return (
         <>  
             {isLoading ? "" : <>
-                <div className="SeasonEpisode">{SeasonEpisode} "{episode["name"]}" ( {episode["air_date"]} )</div>
+                <div className="SeasonEpisodeInfo">{SeasonEpisode} "{episode["name"]}" ( {episode["air_date"]} )</div>
                 <ResultCharacters characters={episode["characters"]}/>
             </>}
         </>

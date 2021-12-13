@@ -1,25 +1,32 @@
 @media (max-width: 600px) { 
     .SeasonEpisode {
-        font-size: 2.5vw !important;
-        margin-bottom: 1rem !important;
+        font-size: 4vw !important;
+        margin-bottom: 1.2rem !important;
     }
     .titleEpisodes {
-        font-size: 3vw !important;
+        font-size: 5vw !important;
         /* margin-bottom: 1.5rem !important;
         margin-top: 1.5rem !important; */
     }
 
     .season {
-        font-size: 2.85vw !important;
-        margin-bottom: 0.6rem !important;
-        margin-top: 0.6rem !important;
+        font-size: 4.5vw !important;
+        /* margin-bottom: 0.4rem !important; */
+        margin-top: 0rem !important;
+    }
+
+    .textField {
+        width: 100%;
     }
  }
 
 .SeasonEpisode {
-    font-size: 1.7vw;
+    font-size: 1.9vw;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .wrapperEpisodes {
@@ -62,7 +69,7 @@ div.SeasonEpisode:hover{
     margin-bottom: 2rem !important;
     margin-top: 2rem !important;
     margin-left: 1rem;
-    width: 50%;
+    width: 100%;
 
 }
 
@@ -72,6 +79,6 @@ div.SeasonEpisode:hover{
     margin-left: 2rem;
 }
 
-/* .textField {
-    
-} */
+.textField {
+    width: 100%;
+}

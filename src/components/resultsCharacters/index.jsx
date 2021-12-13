@@ -30,36 +30,28 @@ function ResultCharacters(props) {
     
     return(<div>
         
-        <NavLink to="/" className="btn btn-success btnLink">Назад к просмотру списка серий</NavLink>
+        <div  className="btnLink">
+            <NavLink to="/" className="btn btn-success">Назад к просмотру списка серий</NavLink>
+        </div>
+        
+        <div className="allCards">
         {
             characters.map(character => (
-                <div className="infoCharacter">
+                <div className="cardCharacter">
                     <img className="img" src={character["image"]} alt="картинка"/>
-                    <div>Имя персонажа: {character["name"]}</div>
-                    <div>Пол: {character["gender"]}</div>
-                    <div>Статус: {character["status"]}</div>
-                    <div>Разновидность: {character["species"]}</div>
+                    <div className="infoCharacter">
+                        <div className="itemInfoCharacter">Имя персонажа: {character["name"]}</div>
+                        <div className="itemInfoCharacter">Пол: {character["gender"]}</div>
+                        <div className="itemInfoCharacter">Статус: {character["status"]}</div>
+                        <div className="itemInfoCharacter">Разновидность: {character["species"]}</div>
+                    </div>
+                    
                 </div>
             ))
         }
+        </div>
         {/* <NavLink to="/">Назад к просмотру серий</NavLink> */}
     </div>)
 }
-
-// a = [
-//     "https://rickandmortyapi.com/api/character/1",
-//     "https://rickandmortyapi.com/api/character/2",
-//     "https://rickandmortyapi.com/api/character/38",
-//     "https://rickandmortyapi.com/api/character/87",
-//   ]
-//   b = a.map((url) => {
-//     let x = url.split("/")
-//     return x[x.length - 1]
-// })
-// ca = b.join()
-// fetch("https://rickandmortyapi.com/api/character/" + ca)
-// .then(res => res.json())
-// .then(sad => console.log(sad))
-
 
 export default ResultCharacters;

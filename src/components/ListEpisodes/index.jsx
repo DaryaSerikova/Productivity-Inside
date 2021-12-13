@@ -76,14 +76,21 @@ const ListEpisodes = () => {
         <div className="wrapperEpisodes">
             <div className="titleEpisodes"> Список серий :</div> 
             <TextField 
+                className="textField" 
+                id="outlined-basic" 
+                label="Поиск по названию серии.." 
+                variant="outlined" 
+                onChange={(event)=> handleSearchInput(event.target.value)}
+            />
+
+            {/* <TextField 
                 className="textField"
                 id="filled-basic" 
                 label="Filled" 
                 variant="filled" 
                 onChange={(event)=> handleSearchInput(event.target.value)}
-            />
-            {}
-            <NavLink to="/characters" className="btn btn-success btnLink" >Перейти к информации о персонажах</NavLink>
+            /> */}
+ 
             {
                 empty ? <div className="empty">notFound</div> : episodes.map((episode) => {
                     // console.log(episodes);
@@ -101,8 +108,6 @@ const ListEpisodes = () => {
                         return (
                             <>
                                 <NavLink to={"/episode/" + episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
-                                {/* <div className="SeasonEpisode">{SeasonEpisode} "{episode["name"]}" ( {episode["air_date"]} )</div> */}
-                                <br/>
                             </>
                             )
                     } else {
@@ -110,9 +115,7 @@ const ListEpisodes = () => {
                         return (
                             <>
                                 <div className="season">{noSeason} Сезон</div>
-                                {/* <div className="SeasonEpisode">{infoSE}</div> */}
                                 <NavLink to={"/episode/" + episode["id"]} className="SeasonEpisode">{infoSE}</NavLink>
-                                <br/>
                             </>
                             )
                     }

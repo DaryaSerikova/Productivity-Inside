@@ -16,7 +16,6 @@ const App = (props) => {
             {/* <Header /> */}
             <main>
                 <Router>
-
                     <Routes>
                         {/* <Route path="*" element={Error} /> */}
                         <Route exact path="/" element={<Home />}/>
@@ -24,7 +23,6 @@ const App = (props) => {
                         
                         {/* <Route path='/info-episode' element={<InfoEpisode />}/> */}
                     </Routes>
-
                 </Router>
             </main>
             {/* <Footer /> */}

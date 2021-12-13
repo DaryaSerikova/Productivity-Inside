@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import "./style.css";
-import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +9,7 @@ const requestURL = 'https://rickandmortyapi.com/api/episode/1';
 
 
 function ResultCharacters(props) {
-    const [characters, setCharacters] = useState([]) //Джессика, Морти, Хуерти.. и прочие
+    const [characters, setCharacters] = useState([]) //Джессика, Морти, .. и прочие
     console.log(props)
 
     useEffect(() => {

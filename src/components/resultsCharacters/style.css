@@ -14,9 +14,20 @@
     margin: 1.5rem;
     display: flex;
     flex-direction: column;
-    /* border: 4px solid rgb(138, 138, 138); */
-    box-shadow: 4px 2px 17px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(196, 196, 196, 0.7);
+    box-shadow: 4px 2px 17px 1px rgba(0, 0, 0, 0.2);
+    
 }
+
+.cardCharacter:hover {
+    -moz-transition: all 170ms ease-out;
+    -o-transition: all 170ms ease-out;
+    -webkit-transition: all 170ms ease-out;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    /* border: 1px solid rgba(53, 6, 6, 0.5); */
+  }
 
 .infoCharacter {
     display: flex;

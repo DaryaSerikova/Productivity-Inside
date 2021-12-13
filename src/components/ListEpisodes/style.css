@@ -1,0 +1,77 @@
+@media (max-width: 600px) { 
+    .SeasonEpisode {
+        font-size: 2.5vw !important;
+        margin-bottom: 1rem !important;
+    }
+    .titleEpisodes {
+        font-size: 3vw !important;
+        /* margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important; */
+    }
+
+    .season {
+        font-size: 2.85vw !important;
+        margin-bottom: 0.6rem !important;
+        margin-top: 0.6rem !important;
+    }
+ }
+
+.SeasonEpisode {
+    font-size: 1.7vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.wrapperEpisodes {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    /* display: flex;
+    flex-direction: column;
+    justify-content:flex-start; */
+
+    /* align-items: center; */
+    /* height: 100%; */
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+  
+.titleEpisodes {
+    font-size: 2.4vw;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    margin-left: 2rem;
+}
+
+.season {
+    font-size: 2vw;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+div.SeasonEpisode:hover{
+    color:rgb(44, 4, 177);
+    /* -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); */
+}
+
+.buttonEpisodesInfo {
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+    margin-left: 1rem;
+    width: 50%;
+
+}
+
+.empty {
+    font-size: 1.7vw;
+    margin-top: 1.2rem;
+    margin-left: 2rem;
+}
+
+/* .textField {
+    
+} */
